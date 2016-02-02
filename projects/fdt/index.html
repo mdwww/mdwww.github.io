@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FUSE Diagnostic Tool</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="guide.pdf">Guide</a></li>
+          <li><a href="https://github.com/MatthewDooler/fdt">Repository</a></li>
+        </ul>
+        <h3 class="text-muted">FUSE Diagnostic Tool</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>FUSE<br />Diagnostic Tool</h1>
+        <p class="lead">Development toolkit for writing FUSE filesystems, providing fully automated testing and advanced debugging facilities.</p>
+        <p class="lead">Available for Mac OS X and Linux.</p>
+        <p><a class="btn btn-lg btn-success" href="fdt.zip" role="button">Download</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Features</h4>
+          <p>
+            <ul>
+              <li>Interactive assistance during filesystem development</li>
+              <li>Easily extensible test suite</li>
+              <li>Displays API calls in real-time</li>
+              <li>Graphical user interface</li>
+              <li>Compatible with Mac OS X and Linux</li>
+            </ul>
+          </p>
+
+          <h4>How it works</h4>
+          <p>The tool intercepts FUSE API calls at the userspace level by wrapping the existing FUSE library.</p>
+          <p>Mounting a FUSE filesystem with the tool will use our modified library, allowing artificial calls to be made against the filesystem for testing and providing visualisation and control over execution of real functions.</p>
+          <p>It runs on Linux using the standard <a href="http://fuse.sourceforge.net">libfuse</a> library, and for Mac OS X compatibility it uses <a href="http://osxfuse.github.io/">osxfuse</a>.
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Getting started</h4>
+          <p>Running <code>./fdt</code> will open the application GUI. Refer to the <a href="guide.pdf">User Guide</a> for details on how to use it.</p>
+          <p>The tool can be compiled from source by running <code>make</code> in the main directory.</p>
+          <p>On Linux, the libfuse wrapper can be compiled by running <code>make</code> in the libfuse directory.</p>
+          <p>On Mac, the osxfuse wrapper can be compiled by running <code>sudo ./build.sh -t dist</code> in the osxfuse directory.</p>
+          
+          <h4>Contact</h4>
+          <p>Email me at: dool<a href="http://www.google.com/recaptcha/mailhide/d?k=015SskU4P-BPiMPvvpPsteQQ==&amp;c=-zPrWSPFy3GshSTXJgzsI3NA5uOFzoXUyW0jqMGmAqE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075015SskU4P-BPiMPvvpPsteQQ\75\75\46c\75-zPrWSPFy3GshSTXJgzsI3NA5uOFzoXUyW0jqMGmAqE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">...</a>@gmail.com</p>
+
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; Matthew Dooler <?php echo date("Y"); ?></p>
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
