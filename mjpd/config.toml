@@ -1,0 +1,4 @@
+baseURL = "https://matthewdooler.co.uk/pd"
+languageCode = "en-gb"
+title = "MJ Property"
+theme = "ananke"
